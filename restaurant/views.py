@@ -14,11 +14,13 @@ def index(request):
 
 
 class MenuItemView(generics.ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuItemSerializer
 
 
 class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuItemSerializer
 
@@ -31,6 +33,7 @@ class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class UserViewSet(viewsets.ModelViewSet):

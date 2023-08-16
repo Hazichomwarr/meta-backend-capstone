@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import index, MenuItemView, SingleMenuItemView
+from .views import MenuItemView, index, SingleMenuItemView
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [

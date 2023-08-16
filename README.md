@@ -1,6 +1,6 @@
 # meta-backend-capstone
 
-testing endpoints on insomnia:
+testing endpoints:
 
 auth/token/login
 restaurant/menu/
